@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Modal} from 'react-bootstrap'
+import Mouse from './mouse';
 
 class Fieval extends React.Component{
   constructor(){
@@ -23,16 +23,8 @@ handleClick(){
    return(
     <div>
         <button onClick={this.handleClick.bind(this)}>Fieval</button>
+        <Mouse snowday={this.state.showModal} cubagoodingjr={close}/>
 
-        <Modal show={this.state.showModal} onHide={() => this.setState({showModal: false})}>
-        <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
-        </Modal.Header>
-
-          <Modal.Body>
-            Goes West
-          </Modal.Body>
-        </Modal>
     </div>
   )
  }
